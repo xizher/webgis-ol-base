@@ -1,22 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <MapContainer :map-id="mapId" />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+/* eslint-disable */
+import { onMounted } from 'vue'
+import MapContainer from './project/components/map/map-container/map-container.vue'
+import { WebMap, Basemap } from './wxz/gis/ol'
+import { BaseUtils } from './wxz/js-utils'
+/* eslint-enable */
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+const mapId = BaseUtils.guid() // eslint-disable-line
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass" scoped>
+
 </style>

@@ -1,0 +1,11 @@
+// @import '/@project/styles/mixins/mixins';
+@import '../../../styles/mixins/mixins.scss';
+
+.map-container {
+  @include width-height(100%, 100%);
+  display: flex;
+  
+  > * {
+    flex: 1;
+  }
+}
