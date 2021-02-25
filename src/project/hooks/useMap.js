@@ -12,8 +12,12 @@ let webMap = null
 export default () => webMap
 
 export function useCreateWebMap (mapId, options = {}) {
-  const webMap = new WebMap(mapId, options)
-    .use(new Basemap())
 
-  onMounted(() => webMap.mount())
+  onMounted(() => {
+    webMap = new WebMap(mapId, options)
+      .use(new Basemap())
+      .mount()
+
+    window.webMap = webMap // 开发模式下使用
+  })
 }
