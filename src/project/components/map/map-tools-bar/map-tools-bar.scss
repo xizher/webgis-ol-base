@@ -1,0 +1,19 @@
+.map-tools-bar {
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  .map-tools-bar-item {
+    background-color: white;
+    margin: 8px;
+    padding: 4px;
+    box-shadow: 2px 2px 5px #888888;
+    cursor: pointer;
+  }
+
+  .map-tools-bar-item__selected {
+    font-weight: bold;
+  }
+
+}
