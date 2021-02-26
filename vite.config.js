@@ -36,6 +36,7 @@ export default defineConfig({
       'ol/geom/LineString',
       'ol/geom/Polygon',
       'ol/geom/Circle',
+      'ol/interaction',
       'ol/interaction/DragPan',
     ]
   },

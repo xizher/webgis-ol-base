@@ -1,0 +1,18 @@
+.map-marker {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #888888;
+
+  .map-marker-selector-item {
+    margin: 4px;
+    border: 1px solid #333;
+    cursor: pointer;
+  }
+
+  .map-marker-selector-item__selected {
+    font-weight: bold;
+  }
+}
