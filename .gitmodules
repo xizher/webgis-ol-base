@@ -1,3 +1,6 @@
 [submodule "src/wxz"]
 	path = src/wxz
 	url = https://github.com/xizher/wxz.git
+[submodule "src/zhd"]
+	path = src/zhd
+	url = https://github.com/xizher/zhd.git
