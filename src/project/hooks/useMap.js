@@ -2,6 +2,7 @@ import { onMounted, ref } from 'vue'
 import {
   WebMap,
   Basemap,
+  MapTools,
 } from '../../zhd/dist/gis/openlayers'
 
 /**
@@ -21,6 +22,7 @@ export function useCreateWebMap (mapId, options = {}) {
     webMap = new WebMap(mapId, options)
       // .use(new OlHooks)
       .use(new Basemap())
+      .use(new MapTools())
       // .use(new MapElementDisplay())
       // .use(new MapTools())
       // .use(new MapCursor())
