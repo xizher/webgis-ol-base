@@ -1,9 +1,9 @@
 <template>
   <MapContainer :map-id="mapId" />
   <div v-if="loaded">
-    <!-- <MapToolsBar />
+    <!-- <MapToolsBar /> -->
     <BasemapSelector />
-    <MapMarker /> -->
+    <!-- <MapMarker /> -->
   </div>
 </template>
 
