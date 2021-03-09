@@ -3,6 +3,8 @@ import {
   WebMap,
   Basemap,
   MapTools,
+  MapCursor,
+  MapElementDisplay
 } from '../../zhd/dist/gis/openlayers'
 
 /**
@@ -20,12 +22,10 @@ export function useCreateWebMap (mapId, options = {}) {
 
   onMounted(() => {
     webMap = new WebMap(mapId, options)
-      // .use(new OlHooks)
       .use(new Basemap())
+      .use(new MapElementDisplay())
       .use(new MapTools())
-      // .use(new MapElementDisplay())
-      // .use(new MapTools())
-      // .use(new MapCursor())
+      .use(new MapCursor())
       .mount()
     loaded.value = true
 

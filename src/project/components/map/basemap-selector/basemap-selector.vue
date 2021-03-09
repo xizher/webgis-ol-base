@@ -5,7 +5,7 @@ import {
   useList,
   useKey,
   useVisible,
-} from '../../../../zhd/hooks/gis.ol/basemap.hooks'
+} from '../../../../zhd/dist/gis/openlayers/hooks/basemap.hooks'
 import './basemap-selector.scss'
 
 export default defineComponent({
