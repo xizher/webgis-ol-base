@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "typedoc": "npx typedoc --out docs src/zhd/src/ --tsconfig src/zhd/tsconfig.json"
   },
   "dependencies": {
     "@turf/turf": "^6.3.0",
@@ -24,8 +25,11 @@
     "@vue/compiler-sfc": "^3.0.5",
     "eslint": "^7.20.0",
     "eslint-plugin-vue": "^7.6.0",
+    "gulp": "^4.0.2",
+    "gulp-typedoc": "^2.2.9",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
+    "typedoc": "^0.20.30",
     "typescript": "^4.2.3",
     "vite": "^2.0.1"
   }
