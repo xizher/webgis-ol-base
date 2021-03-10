@@ -6,6 +6,7 @@ const pathResolve = dirName => path.resolve(__dirname, dirName) // eslint-disabl
 
 export default defineConfig({
   server: {
+    hort: '10.6.4.55',
     port: 8080,
   },
   resolve: {

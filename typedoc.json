@@ -1,5 +1,0 @@
-{
-  "entryPoints": ["src/zhd/src/gis/openlayers/web-map/web-map.ts"],
-  "out": "docs",
-  "tsconfig": "src/zhd/tsconfig.json"
-}
