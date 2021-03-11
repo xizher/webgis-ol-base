@@ -15,11 +15,12 @@
 <script>
 import { defineComponent } from 'vue'
 import useMap from '../../../hooks/useMap'
+import useMapTools from '../../../../zhd/dist/gis/openlayers/hooks/map-tools.hooks'
 import './map-tools-bar.scss'
 export default defineComponent({
   name: 'MapToolsBar',
   setup () {
-    const [activedKey, toolList] = useMap().olHooks.useMapTools([
+    const [activedKey, toolList] = useMapTools(useMap().mapTools, [
       'default',
       'zoom-in',
       'zoom-out',

@@ -1,14 +1,14 @@
 <template>
   <MapContainer :map-id="mapId" />
   <div v-if="loaded">
-    <!-- <MapToolsBar /> -->
+    <MapToolsBar />
     <BasemapSelector />
-    <!-- <MapMarker /> -->
+    <MapMarker />
   </div>
 </template>
 
 <script setup>
-/* eslint-disable */
+/* eslint-disable no-unused-vars */
 import { onMounted } from 'vue'
 import MapContainer from './project/components/map/map-container/map-container.vue'
 import MapToolsBar from './project/components/map/map-tools-bar/map-tools-bar.vue'
@@ -17,11 +17,11 @@ import MapMarker from './project/components/map/map-marker/map-marker.vue'
 import { useLoaded } from './project/hooks/useMap'
 import { WebMap, Basemap } from './wxz/gis/ol'
 import { BaseUtils } from './wxz/js-utils'
-/* eslint-enable */
 
-const loaded = useLoaded() // eslint-disable-line
-const mapId = BaseUtils.guid() // eslint-disable-line
+const loaded = useLoaded()
+const mapId = BaseUtils.guid()
 
+/* eslint-enable no-unused-vars */
 </script>
 
 <style lang="scss" scoped>

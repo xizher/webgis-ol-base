@@ -12,7 +12,7 @@
       </div>
       <div
         class="map-marker-selector-item"
-        @click="useClear"
+        @click="clear"
       >
         Clear
       </div>
@@ -23,19 +23,19 @@
 <script>
 import { defineComponent } from 'vue'
 import useMap from '../../../hooks/useMap'
+import useMark, { useEnabled, useClearMark } from '../../../../zhd/dist/gis/openlayers/hooks/mark-tool.hooks'
 import './map-marker.scss'
 
 export default defineComponent({
   name: 'MapMarker',
   setup () {
-    const {
-      useEnabled, useClear, useMarkType
-    } = useMap().olHooks.useMarkTool()
-    const [selectedType, typeList] = useMarkType()
-    const enabled = useEnabled()
+    const { mapTools } = useMap()
+    const [selectedType, typeList] = useMark(mapTools)
+    const enabled = useEnabled(mapTools)
+    const clear = useClearMark(mapTools)
 
     return {
-      selectedType, typeList, enabled, useClear
+      selectedType, typeList, enabled, clear
     }
   },
 })
