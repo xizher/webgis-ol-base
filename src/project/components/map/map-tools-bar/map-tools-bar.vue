@@ -26,6 +26,7 @@ export default defineComponent({
       'zoom-out',
       'zoom-in-rect',
       'zoom-out-rect',
+      'fullscreen',
     ])
 
     function set (key) {

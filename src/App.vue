@@ -4,6 +4,7 @@
     <MapToolsBar />
     <BasemapSelector />
     <MapMarker />
+    <MapMeasure />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import MapContainer from './project/components/map/map-container/map-container.v
 import MapToolsBar from './project/components/map/map-tools-bar/map-tools-bar.vue'
 import BasemapSelector from './project/components/map/basemap-selector/basemap-selector.vue'
 import MapMarker from './project/components/map/map-marker/map-marker.vue'
+import MapMeasure from './project/components/map/map-measure/map-measure.vue'
 import { useLoaded } from './project/hooks/useMap'
 import { WebMap, Basemap } from './wxz/gis/ol'
 import { BaseUtils } from './wxz/js-utils'

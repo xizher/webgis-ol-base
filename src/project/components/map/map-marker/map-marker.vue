@@ -16,6 +16,13 @@
       >
         Clear
       </div>
+      <div
+        class="map-marker-selector-item"
+        :class="actived ? 'map-marker-selector-item__selected' : ''"
+        @click="actived = true"
+      >
+        Remove
+      </div>
     </div>
   </div>
 </template>
@@ -23,7 +30,7 @@
 <script>
 import { defineComponent } from 'vue'
 import useMap from '../../../hooks/useMap'
-import useMark, { useEnabled, useClearMark } from '../../../../zhd/dist/gis/openlayers/hooks/mark-tool.hooks'
+import useMark, { useEnabled, useClearMark, useMarkRemoveTool } from '../../../../zhd/dist/gis/openlayers/hooks/mark-tool.hooks'
 import './map-marker.scss'
 
 export default defineComponent({
@@ -33,9 +40,10 @@ export default defineComponent({
     const [selectedType, typeList] = useMark(mapTools)
     const enabled = useEnabled(mapTools)
     const clear = useClearMark(mapTools)
+    const actived = useMarkRemoveTool(mapTools)
 
     return {
-      selectedType, typeList, enabled, clear
+      selectedType, typeList, enabled, clear, actived
     }
   },
 })
