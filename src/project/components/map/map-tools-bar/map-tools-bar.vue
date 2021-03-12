@@ -24,9 +24,11 @@ export default defineComponent({
       'default',
       'zoom-in',
       'zoom-out',
+      'zoom-home',
       'zoom-in-rect',
       'zoom-out-rect',
       'fullscreen',
+      'fullmap',
     ])
 
     function set (key) {

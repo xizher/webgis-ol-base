@@ -6,6 +6,7 @@ import {
   MapCursor,
   MapElementDisplay
 } from '../../zhd/dist/gis/openlayers'
+import { LayerOperation } from '../../zhd/dist/gis/openlayers/plugins/layer-operation/layer-operation'
 
 /**
  * @type { WebMap }
@@ -18,14 +19,15 @@ export function useLoaded () {
   return loaded
 }
 
-export function useCreateWebMap (mapId, options = {}) {
+export function useCreateWebMap (mapId, options) {
 
   onMounted(() => {
-    webMap = new WebMap(mapId, options)
-      .use(new Basemap())
+    webMap = new WebMap(mapId, options.webgisOptions)
+      .use(new Basemap(options.basemapOptions))
       .use(new MapElementDisplay())
       .use(new MapTools())
       .use(new MapCursor())
+      .use(new LayerOperation(options.layerOperationOptions))
       .mount()
     loaded.value = true
 

@@ -8,6 +8,7 @@
 import { defineComponent } from 'vue'
 import { useCreateWebMap } from '../../../hooks/useMap'
 import './map-container.scss'
+import appConfig from '../../../config/app.config'
 
 export default defineComponent({
   name: 'MapContainer',
@@ -15,7 +16,7 @@ export default defineComponent({
     mapId: { type: String, default: 'map-container' }
   },
   setup (props) {
-    useCreateWebMap(props.mapId)
+    useCreateWebMap(props.mapId, appConfig.webgisOptions)
 
     return {
     }
